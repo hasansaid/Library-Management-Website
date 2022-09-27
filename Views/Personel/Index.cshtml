@@ -1,0 +1,29 @@
+﻿@using MvcKutuphane2.Models
+@model List<TBLPERSONEL>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2 style="margin:15px">Personeller</h2>
+
+<table class="table table-bordered" style="margin:15px">
+    <tr>
+        <th>Personel Id</th>
+        <th>Personel Ad</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.PERSONEL</td>
+            <td><a href="/Personel/PersonelSil/@item.ID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Personel/PersonelGetir/@item.ID" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+
+</table>
+<a href="/Personel/PersonelEkle/" class="btn btn-primary" style="margin:15px"> Yeni Personel Ekle</a>
+

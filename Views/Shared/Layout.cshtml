@@ -1,0 +1,96 @@
+﻿@{
+    Layout = null;
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<style>
+    .sidenav {
+        height: 100%;
+        width: 160px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+
+
+
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+        }
+
+
+
+            .sidenav a:hover {
+                color: #f1f1f1;
+            }
+
+
+
+    .main {
+        margin-left: 160px;
+        padding: 0px 10px;
+    }
+
+
+
+
+    @@media screen and (max-height: 450px) {
+        .sidenav {
+            padding-top: 15px;
+        }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+    }
+</style>
+<title>Kütüphane Yönetim Sistemi</title>
+<!DOCTYPE html>
+<html>
+
+
+
+@*<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">*@
+<body>
+
+
+    <!-- Sidebar -->
+    <div class="sidenav" style="width:25%">
+        <h3 class="w3-bar-item">MENÜ</h3>
+        <a href="#" class="w3-bar-item w3-button glyphicon glyphicon-home"> Ana Sayfa</a>
+        <a href="/Kategori/Index/" class="w3-bar-item w3-button glyphicon glyphicon-list"> Kategoriler </a>
+        <a href="/Kitap/Index/" class="w3-bar-item w3-button glyphicon glyphicon-book"> Kitaplar </a>
+        <a href="/Yazar/Index/" class="w3-bar-item w3-button glyphicon glyphicon-pencil"> Yazarlar</a>
+        <a href="/Uye/Index/" class="w3-bar-item w3-button glyphicon glyphicon-user"> Üyeler</a>
+        <a href="/Personel/Index/" class="w3-bar-item w3-button glyphicon glyphicon-tower"> Personeller</a>
+        <a href="/Odunc/OduncVer/" class="w3-bar-item w3-button glyphicon glyphicon-circle-arrow-right"> Ödünç Kitap Ver</a>
+        <a href="/Odunc/Index/" class="w3-bar-item w3-button glyphicon glyphicon-circle-arrow-left"> Ödünç Kitap Al</a>
+        <a href="#" class="w3-bar-item w3-button glyphicon glyphicon-euro"> Kasa</a>
+        <a href="#" class="w3-bar-item w3-button glyphicon glyphicon-dashboard"> İşlemler</a>
+        <a href="#" class="w3-bar-item w3-button glyphicon glyphicon-picture"> Galeri</a>
+        <a href="#" class="w3-bar-item w3-button glyphicon glyphicon-gift"> Vitrin</a>
+        <a href="#" class="w3-bar-item w3-button glyphicon glyphicon-cog"> Ayarlar</a>
+        <a href="#" class="w3-bar-item w3-button glyphicon glyphicon-paperclip"> Yardım</a>
+        <a href="#" class="w3-bar-item w3-button glyphicon glyphicon-remove-sign"> Çıkış</a>
+    </div>
+    <!-- Page Content -->
+    <div style="margin-left:25%">
+        <div class="w3-container w3-teal">
+            @*<h1>Yönetim</h1>*@
+        </div>
+        <div class="w3-container">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>

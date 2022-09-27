@@ -1,0 +1,21 @@
+﻿@model MvcKutuphane2.Models.TBLYAZAR
+@{
+    ViewBag.Title = "YazarEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<form class="form-group" method="post" style="margin:15px">
+    <br />
+    <div style="margin-top:15px">
+        <label>Yazar Adı</label>
+        <input type="text" class="form-control" name="Ad" />
+        <label>Yazar Soyadı</label>
+        <input type="text" class="form-control" name="Soyad" />
+        <label>Yazar Detay</label>
+        <input type="text" class="form-control" name="Detay" />
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-info" id="Btn2" style="margin:15px">Yazar Ekle</button>
+    </div>
+</form>
+
+

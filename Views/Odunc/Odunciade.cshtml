@@ -1,0 +1,38 @@
+﻿@model MvcKutuphane2.Models.TBLHAREKET
+@{
+    ViewBag.Title = "Odunciade";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("OduncGuncelle", "Odunc", FormMethod.Post))
+{
+    <br />
+
+    <div class="form-group" style="margin:15px">
+        <label>Hareket Id</label>
+        @Html.LabelFor(k => k.ID)
+        @Html.TextBoxFor(k => k.ID, new { @class = "form-control" })
+        <br />
+        <label>Kitap Adı</label>
+        @Html.TextBoxFor(k => k.TBLKITAP.AD, new { @class = "form-control" })
+        <br />
+        <label>Üye</label>
+        @Html.TextBoxFor(k => k.TBLUYELER.AD, new { @class = "form-control" })
+        <br />
+        <label>Personel</label>
+        @Html.TextBoxFor(k => k.TBLPERSONEL.PERSONEL, new { @class = "form-control" })
+        <br />
+        <label>Alış Tarihi</label>
+        @Html.TextBoxFor(k => k.ALISTARIH, "{0:dd.MM.yyyy}", new { @class = "form-control" })
+        <br />
+        <label>Normal İade Tarihi</label>
+        @Html.TextBoxFor(k => k.IADETARIH, "{0:dd.MM.yyyy}", new { @class = "form-control" })
+        <br />
+        <label>Üyenin Getirdiği Tarih</label>
+        <input type="text" class="form-control" name="deneme" value="@DateTime.Now.ToShortDateString()" />
+
+    </div>
+    <div>
+        <button class="btn btn-group" style="margin:15px; background-color:#64d8ca; color:white">Ödünç Kitabı Geri Al</button>
+    </div>
+}
